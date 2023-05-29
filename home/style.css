@@ -1,0 +1,215 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.maindiv
+{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+.maindiv .subdiv1
+{
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.maindiv .subdiv1 img
+{
+    height: 70px;
+    width: 555px;
+}
+
+.maindiv .subdiv2
+{
+    height: 150px;
+    width: 100%;
+    background: url('images/2815668.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.maindiv .subdiv2 marquee img
+{
+    height: 148px;
+    width: 230px;
+    margin-left: 1px;
+}
+
+.maindiv .subdiv3
+{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    background: #868181;
+}
+
+.maindiv .subdiv3 ul
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.maindiv .subdiv3 ul li
+{
+    margin-top: 10px;
+}
+
+.maindiv .subdiv3 ul li a 
+{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.maindiv .subdiv3 ul li a:hover
+{
+    background: #e7789d;
+}
+
+.maindiv .subdiv4
+{
+    position: relative;
+    height: 350px;
+    width: 100%;
+    display: flex;
+}
+
+.maindiv .subdiv4 .subdiv41
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 30%;
+    background: url('images/Arif2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.maindiv .subdiv4 .subdiv41 p
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.maindiv .subdiv4 .subdiv41 span
+{
+    padding: 0px 80px;
+}
+
+.maindiv .subdiv4 .subdiv41 a
+{
+    margin-left:5px;
+    text-decoration: none;
+    color: #000000;
+}
+.maindiv .subdiv4 .subdiv42
+{
+    position: absolute;
+    top: 0;
+    left: 30%;
+    height: 100%;
+    width: 25%;
+    background: url('images/square.jpg');
+}
+
+.maindiv .subdiv4 .subdiv43
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 45%;
+}
+
+
+/* Slider section */
+
+.slider{
+    width: 600px;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides{
+    height: 100%;
+    width: 500%;
+    display: flex;
+}
+
+.slide{
+    width: 20%;
+    height: 100%;
+    transition: 1s;
+}
+
+.slide img{
+    height: 100%;
+    width: 100%;
+}
+
+.navigation{
+    height: 50px;
+    width: 200px;
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-90px);
+    display: flex;
+}
+
+.bar{
+    height: 20px;
+    width: 20px;
+    border: 3px solid rgb(78, 212, 0);
+    border-radius: 50%;
+    margin: 6px;
+    cursor: pointer;
+}
+
+.bar:hover{
+    background: rgb(78, 212, 0);
+}
+
+input{
+    display: none;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}

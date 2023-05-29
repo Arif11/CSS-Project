@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box
+{
+    position: relative;
+    height: 520px;
+    width: 480px;
+    background: #161515;
+    border-radius: 60px 0px;
+    overflow: hidden;
+}
+
+.light
+{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+
+.box::before
+{
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    height: 520px;
+    width: 480px;
+    transform-origin: right bottom;
+    background: linear-gradient(0deg,transparent,
+    transparent,#2ae6ff, #2ae6ff, #2ae6ff);
+    animation: arif 6s linear infinite;
+}
+
+.box::after
+{
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    height: 520px;
+    width: 480px;
+    transform-origin: right bottom;
+    background: linear-gradient(0deg,transparent,
+    transparent,#2ae6ff, #2ae6ff, #2ae6ff);
+    animation: arif 6s linear infinite;
+    animation-delay: -3s;
+    z-index: 1;
+}
+
+.light::before
+{
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    height: 520px;
+    width: 480px;
+    transform-origin: right bottom;
+    background: linear-gradient(0deg,transparent,
+    transparent,#ffef14, #ffef14, #ffef14);
+    animation: arif 6s linear infinite;
+    animation-delay: -1.5s;
+    z-index: 1;
+}
+
+.light::after
+{
+    content: '';
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    height: 520px;
+    width: 480px;
+    transform-origin: right bottom;
+    background: linear-gradient(0deg,transparent,
+    transparent,#ffef14, #ffef14, #ffef14);
+    animation: arif 6s linear infinite;
+    animation-delay: -4.5s;
+    z-index: 1;
+}
+
+@keyframes arif
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.box form
+{
+    position: absolute;
+    inset: 4px;
+    background: #333030;
+    border-radius: 60px 0px;
+    padding: 50px 40px;
+    z-index: 7;
+}
+
+.box form .reg
+{
+    font-size: 50px;
+    color: #eed9d9;
+    text-align: center;
+    font-family: russo one;
+}
+
+.box form .inputbox
+{
+    position: relative;
+    width: 400px;
+    margin-top: 30px;
+}
+
+.box form .inputboxf
+{
+    position: relative;
+    width: 400px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fname
+{
+    position: relative;
+    width: 48%;
+    padding: 15px 10px 10px; 
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    z-index: 10;
+    letter-spacing: 1.5px;
+    transition: 0.5s;
+}
+
+.fspan
+{
+    position: absolute;
+    left: 0;
+    padding: 15px 0px 10px;
+    pointer-events: none; 
+    color:#a59797;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.5s;   
+}
+
+.fname:valid ~ .fspan,
+.fname:focus ~ .fspan
+{
+    color: #fff;
+    font-size: 14px;
+    transform: translateY(-34px);
+}
+
+.fi
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 48%;
+    background: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.fname:valid ~ .fi,
+.fname:focus ~ .fi
+{
+    height: 40px;
+}
+
+.lname
+{
+    position: relative;
+    width: 48%;
+    padding: 15px 10px 10px;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    z-index: 10;
+    letter-spacing: 1.5px;
+    transition: 0.5s;    
+}
+
+.lspan
+{
+    position: absolute;
+    left: 200px;
+    padding: 15px 10px 10px;
+    pointer-events: none; 
+    color:#a59797;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.5s; 
+}
+
+.lname:valid ~ .lspan,
+.lname:focus ~ .lspan
+{
+    color: #fff;
+    font-size: 14px;
+    transform: translateY(-34px);
+}
+
+.li
+{
+    position: absolute;
+    left: 208px;
+    bottom: 0;
+    height: 2px;
+    width: 48%;
+    background: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.lname:valid ~ .li,
+.lname:focus ~ .li
+{
+    height: 40px;
+}
+
+.box form .inputbox input
+{
+    position: relative;
+    width: 100%;
+    padding: 15px 10px 10px; 
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    z-index: 10;
+    letter-spacing: 1.5px;
+    transition: 0.5s;
+}
+
+.box form .inputbox span
+{
+    position: absolute;
+    left: 0;
+    padding: 15px 0px 10px;
+    pointer-events: none; 
+    color:#a59797;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.5s; 
+}
+
+.box form .inputbox input:valid ~ span,
+.box form .inputbox input:focus ~ span
+{
+    color: #fff;
+    font-size: 14px;
+    transform: translateY(-34px);
+}
+
+.box form .inputbox i
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.box form .inputbox input:valid ~ i,
+.box form .inputbox input:focus ~ i
+{
+    height: 40px;
+}
+
+.box form .links
+{
+    text-align: center;
+    margin-top: 15px;
+    color:#fff
+}
+
+.box form .links a
+{
+    color: #25fff4;
+}
+
+.box form input[type="submit"]
+{
+    margin: 15px 125px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    color: #000;
+    font-family: russo one;
+    background: #998e8e;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    transition: 0.5s;
+}
+
+.box form input[type="submit"]:active
+{
+    background: #fff;
+}

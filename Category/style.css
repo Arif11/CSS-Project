@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body
+{
+    height: 100vh;
+    width: 100%;
+    background: url('images/backgroun.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.maindiv
+{
+    position: relative;
+    height: 550px;
+    width: 900px;
+    background: transparent;
+}
+
+h1
+{
+    color: #000;
+    font-size: 50px;
+    font-family: russo one;
+    font-weight: bold;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+.maindiv .subdiv1
+{
+    position: relative;
+    height: 50%;
+    width: 100%;
+    background: transparent;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.maindiv .subdiv1 .subdiv11
+{
+    width: 290px;
+    height: 220px;
+}
+
+.maindiv .subdiv1 .subdiv12
+{
+    width: 290px;
+    height: 220px;
+}
+
+.maindiv .subdiv1 .subdiv13
+{
+    width: 290px;
+    height: 220px;
+}
+
+.maindiv .subdiv2
+{
+    position: relative;
+    height: 50%;
+    width: 100%;
+    background: transparent;
+    float: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.maindiv .subdiv2 .subdiv21
+{
+    width: 290px;
+    height: 220px;
+}
+
+.maindiv .subdiv2 .subdiv22
+{
+    width: 290px;
+    height: 220px;
+}
+
+.maindiv .subdiv2 .subdiv23
+{
+    width: 290px;
+    height: 220px;
+}
+
+/* image hover section for start*/
+
+.box
+{
+    position: relative;
+    width: 290px;
+    height: 220px;
+    overflow: hidden;
+}
+
+.box img
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.box .layer
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1), #ff004f);
+    left: 0;
+    top: 100%;
+    transition: all 0.5s;
+}
+
+.box .layer h1
+{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color:#fff;
+}
+
+.box .layer p
+{
+    text-align: justify;
+    margin: auto 10px;
+    color:#fff;
+}
+
+.layer i
+{
+    font-size: 25px;
+    color: #fff;
+    margin: 10px 130px;
+}
+
+.box:hover .layer
+{
+    top: 0;
+}
+
+.box:hover img
+{
+    transform: scale(1.2);
+}
+
+/* image hover section for end*/
+
+/* media Quary section for start*/
+
+@media(min-width:1200px){
+    /*Extra large Device*/
+    }
+    @media(min-width:992px) and (max-width:1199px){
+    /*large Device*/
+    }
+    @media(min-width:768px) and (max-width:991px){
+    /*Medium Device*/
+    .maindiv
+    {
+        height: 450px;
+        width: 650px;
+    }
+
+        .box
+    {
+        width: 200px;
+        height: 150px;
+    }
+
+        .box .layer h1
+    {
+        font-size: 20px;
+    }
+
+    .box .layer p
+    {
+        font-size: 10px;
+    }
+
+    .layer i
+{
+    font-size: 15px;
+    margin: 10px 88px;
+}
+
+    }
+    @media (max-width:767px){
+    /* Small Device*/
+    .maindiv
+    {
+        height: 500px;
+        width: 400px;
+    }
+
+        .maindiv .subdiv1
+    {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        float: left;
+        align-items: flex-start;
+    }
+
+    .maindiv .subdiv2
+    {
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        float: right;
+        align-items: flex-start;
+    }
+
+    .box
+    {
+        width: 200px;
+        height: 150px;
+    }
+
+        .box .layer h1
+    {
+        font-size: 20px;
+    }
+
+    .box .layer p
+    {
+        font-size: 10px;
+    }
+
+    .layer i
+{
+    font-size: 15px;
+    margin: 10px 88px;
+}
+
+    }
+
+/* media Quary section for end*/
